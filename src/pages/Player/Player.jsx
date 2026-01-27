@@ -3,7 +3,7 @@ import './Player.css'
 import back_arrow_icon from '../../assets/back_arrow_icon.png'
 import { useNavigate, useParams } from 'react-router-dom'
 
-const player = () => {
+const Player = () => {
   const {id}= useParams();
   const navigate = useNavigate();
 
@@ -45,4 +45,4 @@ const player = () => {
   )
 }
 
-export default player
+export default Player
