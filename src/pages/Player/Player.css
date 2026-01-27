@@ -28,3 +28,37 @@
     width: 90%;
 
 }
+@media (max-width: 800px){
+    .player iframe{
+        width: 90%;
+        height: 60%;
+    }    
+    .player-info{
+        flex-direction: column;
+        gap: 10px;
+        bottom: 4vh;
+        left: 4vh;     
+    }
+    .player-info p.player-info-name{
+        font-size: 14px;
+        font-weight: 500;
+        white-space: wrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 90%;
+        text-align: center;
+
+    }
+    .player-info p.player-info-type{
+        display: none;
+    }
+    .player-info p.player-info-date{
+        display: none;
+    }
+}
+@media (max-width: 500px){
+    .player iframe{
+        width: 95%;
+        height: 50%;
+    }    
+}

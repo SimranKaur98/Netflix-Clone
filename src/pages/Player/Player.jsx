@@ -29,7 +29,7 @@ const Player = () => {
     .then(res => setApiData(res.results[0]))
     .catch(err => console.error(err));
   }, [id, options]);
-  
+
   return (
     <div className='player'>
 
@@ -38,9 +38,9 @@ const Player = () => {
       src={`https://www.youtube.com/embed/${apiData.key}`} title='trailer' frameBorder="0" allowFullScreen></iframe>
 
       <div className="player-info">
-        <p>{apiData.published_at.slice(0, 10)}</p>
-        <p>{apiData.name}</p>
-        <p>{apiData.type}</p>
+        <p className="player-info-date">{apiData.published_at.slice(0, 10)}</p>
+        <p className="player-info-name">{apiData.name}</p>
+        <p className="player-info-type">{apiData.type}</p>
       </div>
 
     </div>
