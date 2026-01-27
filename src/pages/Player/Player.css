@@ -1,72 +1,87 @@
-.player{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;        
+.player {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.player img{
+.player img {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  cursor: pointer;
+}
+.player iframe {
+  width: 80%;
+  height: 80%;
+  border: none;
+  border-radius: 10px;
+}
+.player-info {
+  position: absolute;
+  bottom: 4vh;
+  left: 8vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+@media (max-width: 800px) {
+  .player img {
     position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 50px;
+    top: 10px;
+    left: 10px;
+    width: 40px;
     cursor: pointer;
-}
-.player iframe{
-    width: 80%;
-    height: 80%;
-    border: none;
-    border-radius: 10px;
-}
-.player-info{
-    position: absolute;
-    bottom: 4vh;
-    left: 8vh;     
-    display: flex;
-    justify-content: space-between;
-    align-items: center;        
+  }
+  .player iframe {
     width: 90%;
-
+    height: 70%;
+  }
+  .player-info {
+    flex-direction: column;
+    gap: 10px;
+    bottom: 4vh;
+    left: 4vh;
+  }
+  .player-info p.player-info-name {
+    font-size: 14px;
+    font-weight: 500;
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 90%;
+    text-align: center;
+  }
+  .player-info p.player-info-type {
+    display: none;
+  }
+  .player-info p.player-info-date {
+    display: none;
+  }
 }
-@media (max-width: 800px){
-    .player img{
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        width: 40px;
-        cursor: pointer;
-    }
-    .player iframe{
-        width: 90%;
-        height: 70%;
-
-    }    
-    .player-info{
-        flex-direction: column;
-        gap: 10px;
-        bottom: 4vh;
-        left: 4vh;     
-    }
-    .player-info p.player-info-name{
-        font-size: 14px;
-        font-weight: 500;
-        white-space: wrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        max-width: 90%;
-        text-align: center;
-
-    }
-    .player-info p.player-info-type{
-        display: none;
-    }
-    .player-info p.player-info-date{
-        display: none;
-    }
-}
-@media (max-width: 500px){
-    .player iframe{
-        width: 95%;
-        height: 60%;
-    }    
+@media (max-width: 500px) {
+  .player img {
+    position: absolute;
+    top: 2vh;
+    left: 2vh;
+    width: 40px; /* adjust as needed */
+    height: 40px;
+    cursor: pointer;
+    z-index: 10; /* make sure it’s above iframe */
+  }
+  .player-info {
+    flex-direction: column;
+    gap: 10px;
+    bottom: 2vh;
+    left: 2vh;
+  }
+  .player iframe {
+    width: 98%;
+    max-width: 600px; /* optional */
+    height: 50vh; /* adjust for small screens */
+    margin-bottom: 10vh;
+  }
 }
