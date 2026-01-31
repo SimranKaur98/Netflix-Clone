@@ -11,16 +11,21 @@
     width: 100%;
     padding-left: 6%;
     bottom: 0%;
+      
 }
 .caption-img{
     width: 90%;
     max-width: 420px;
     margin-bottom: 30px;
+    height: auto;
+    
 }
 .hero-caption p{
-    width: 700px;
-    font-size: 17px;
+    width: 700px;    
     margin-bottom: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .hero-btns{
     display: flex;
@@ -57,12 +62,30 @@
     padding-left: 6%
   
 }
+
+@media (max-width: 1256px){
+    .caption-img{
+        margin-bottom: 10px;
+        width: 60%;
+    }
+    .hero-caption p{
+        font-size: 0.9em;
+        margin-bottom: 15px;
+    }
+    .hero-btns .btn img{
+        width: 30px;
+    }
+}
 @media (max-width: 1024px){
     .hero-caption .title_cards{
         display: none;
     }
     .hero-btns{
         margin-bottom: 30px;
+    }
+    .hero-caption .caption-img{
+        height:80%;
+        width: auto;
     }
 }
 @media (max-width: 800px){
